@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SequenceDisplay</title>
+  <base href="/">  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script>
+    // enables communication between SPA over storages. Decouples direct dependencies among libraries in frontend - each consuming library must have a default value in case other library was not active yet producing value inside storage.
+    var _listeners = [];
+    var oAddEventListener = window.addEventListener;
+    window.addEventListener = function(...args) {
+      if(args[0] === 'storage')
+        _listeners.push(args[1]);
+      return oAddEventListener(...args);
+    } 
+    var oSetItem = Storage.prototype.setItem;
+    Storage.prototype.setItem = function(key, newValue) {
+      if(this === window.localStorage || this === window.sessionStorage)
+        _listeners.forEach(_ => _({key, newValue, oldValue: this.getItem(key), url: '', storage: this }));
+      return oSetItem.apply(this, [key, newValue]);
+    } 
+  </script>
+</head>
+<body>
+  <sequence-root></sequence-root>
+<script src="/polyfills-es5.js" nomodule defer></script><script src="/main-es2015.js" type="module"></script><script src="/main-es5.js" nomodule defer></script></body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "/intern/organization": {
+    "id": "organization-dashboard",
+    "roles": [],
+    "path": "/gui/organization-dashboard"
+  },
+  "/dashboard/barbell": {
+    "id": "barbell-display",
+    "roles": [],
+    "path": "/gui/barbell-display"
+  },
+  "/dashboard/referee": {
+    "id": "referee-dashboard",
+    "roles": [],
+    "path": "/gui/referee-dashboard"
+  },
+  "/dashboard/sequence": {
+    "id": "sequence-display",
+    "roles": [],
+    "path": "/gui/sequence-display"
+  },
+  "/": {
+    "id": "portal",
+    "roles": [],
+    "path": "/gui/powerlifting-portal"
+  }
+}

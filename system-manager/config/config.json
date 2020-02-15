@@ -1,0 +1,11 @@
+{
+  "packager_ip": "localhost",
+  "packager_port": "8081",
+  "ip": "localhost",
+  "port": "80",
+  "health_check_interval": "1000",
+  "port_map_offset": "100",
+  "log_module": "/home/david/Schreibtisch/competition/0_deploy/log-adapter/logger",
+  "log_port": "8083",
+  "message_broker_port": "3000"
+}

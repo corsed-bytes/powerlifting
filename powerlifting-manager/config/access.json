@@ -1,0 +1,10 @@
+{
+  "/gui/organization-dashboard": {
+    "method": "GET",
+    "roles": []
+  },
+  "/gui/powerlifting-portal": {
+    "method": "GET",
+    "roles": []
+  }
+}

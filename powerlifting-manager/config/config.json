@@ -1,0 +1,7 @@
+{
+  "ip": "localhost",
+  "port": "8084",
+  "system_module_port": "8080",
+  "message_broker_port": "3000",
+  "frontend_deploy": "deploy"
+}
