@@ -2,7 +2,7 @@
   "log_port": "8083",
   "ip": "localhost",
   "port": "8081",
-  "modules_root": "",
-  "modules_available": "",
+  "modules_root": "/home/david/Schreibtisch/test",
+  "modules_available": "system-manager,log-adapter,powerlifting-manager,user-manager",
   "modules_autostart": ""
 }
