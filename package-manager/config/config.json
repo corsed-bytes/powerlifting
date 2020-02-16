@@ -1,10 +1,8 @@
 {
-  "module_path_": "/home/david/Schreibtisch/competition/0_deploy/",
-  "log_module_": "/home/david/Schreibtisch/competition/0_deploy/log-adapter/logger",
-  "load_modules_": "",
-  "install_modules": "log-adapter,powerlifting-manager,system-manager,user-manager",
-  "load_modules": "system-manager",
   "log_port": "8083",
   "ip": "localhost",
-  "port": "8081"
+  "port": "8081",
+  "modules_root": "",
+  "modules_available": "",
+  "modules_autostart": ""
 }
