@@ -16,4 +16,4 @@ There is an automated install that does:
 
 ## NOTE - Known bugs
 
-Sometimes the view is not loading - indicated by loading circles. In this case please refresh the page. Reason (technical): The microfrontends are loaded by systemjs / canopy tax single spa application on different views that dont clean up very well yet.
+Sometimes the part of GUI is not loading - you can see by endless loading circles. In this case please refresh the page. Reason (technical): The microfrontends are loaded by systemjs / canopy tax single spa application on different views that dont clean up very well yet.
