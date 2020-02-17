@@ -14,16 +14,16 @@ case "${BASH_ARGV[1]}" in
         mkdir "./$module"
         cd "./$module"
         wget -q "$cdn$module/$module" && chmod +x "$module";
-        if [[ $module == *"-manager"* ]]; then
+#        if [[ $module == *"-manager"* ]]; then
             wget -q "$cdn$module/deploy.tar.gz" && tar -xzvf "deploy.tar.gz";
-        fi
+#        fi
         mkdir "./config"
         cd "./config"
         wget -q "$cdn$module/config/config.json"
-        if [[ $module == *"-manager"* ]]; then
+#        if [[ $module == *"-manager"* ]]; then
             wget -q "$cdn$module/config/access.json"
             wget -q "$cdn$module/config/apps.json"
-        fi
+#        fi
         cd "../../"
     done
     echo "{\"log_port\": \"8083\", \"ip\": \"localhost\", \"port\": \"8081\", \"modules_root\": \"$PWD\", \"modules_available\": \"${BASH_ARGV[0]}\",
