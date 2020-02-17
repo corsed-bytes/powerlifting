@@ -10,9 +10,9 @@ There is an automated install that does:
 
 ``` wget -q https://raw.githubusercontent.com/the-corsed-bytes/powerlifting/master/run.sh && chmod +x ./run.sh && ./run.sh install log-adapter,powerlifting-manager,user-manager && sudo ./run.sh ```
 
-## Run auto-install on ARM-System with Linux by
+## Run auto-install on ARMv7-System with Linux by
 
-``` comming soon / need to compile binaries ```
+``` wget -q https://raw.githubusercontent.com/the-corsed-bytes/powerlifting/master/runRasp.sh && chmod +x ./runRasp.sh && ./runRasp.sh install log-adapter,powerlifting-manager,user-manager && sudo ./runRasp.sh ```
 
 ## NOTE - Known bugs
 
