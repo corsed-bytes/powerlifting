@@ -10,3 +10,6 @@ There is an automated install that does:
 
 ``` wget -q https://raw.githubusercontent.com/the-corsed-bytes/powerlifting/master/run.sh && chmod +x ./run.sh && ./run.sh install log-adapter,powerlifting-manager,user-manager && sudo ./run.sh ```
 
+## NOTE - Known bugs
+
+Sometimes the view is not loading - indicated by loading circles. In this case please refresh the page. Reason (technical): The microfrontends are loaded by systemjs / canopy tax single spa application on different views that dont clean up very well yet.
