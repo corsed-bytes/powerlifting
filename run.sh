@@ -13,9 +13,9 @@ case "${BASH_ARGV[1]}" in
         rm -rf "./$module"
         mkdir "./$module"
         cd "./$module"
-        wget -q "$cdn$module/$module" && chmod +x "$module";
+        wget -q "$cdn$module/$module" && chmod +x "$module"
 #        if [[ $module == *"-manager"* ]]; then
-            wget -q "$cdn$module/deploy.tar.gz" && tar -xzvf "deploy.tar.gz";
+            wget -q "$cdn$module/deploy.tar.gz" && tar -xzvf "deploy.tar.gz"
 #        fi
         mkdir "./config"
         cd "./config"
@@ -36,7 +36,8 @@ case "${BASH_ARGV[1]}" in
     for module in "${ADDR[@]}"; do
         rm -rf "./$module/$module"
         cd "./$module"
-        wget -q "$cdn$module/$module" && chmod +x "$module";
+        wget -q "$cdn$module/$module" && chmod +x "$module"
+        wget -q "$cdn$module/deploy.tar.gz" && tar -xzvf "deploy.tar.gz"
         cd "../"
     done
     ;;
