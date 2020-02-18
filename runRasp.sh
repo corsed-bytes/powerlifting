@@ -2,6 +2,7 @@
 
 echo 'Starting command line manager...'
 
+cdnConfig='https://github.com/the-corsed-bytes/powerlifting/raw/master/';
 cdn='https://github.com/the-corsed-bytes/powerlifting/releases/download/v0.1-alpha/';
 
 case "${BASH_ARGV[1]}" in
@@ -13,16 +14,16 @@ case "${BASH_ARGV[1]}" in
         rm -rf "./$module"
         mkdir "./$module"
         cd "./$module"
-        wget -q "$cdn$module/$module" && chmod +x "$module"
+        wget -q "$cdn$module" && chmod +x "$module"
 #        if [[ $module == *"-manager"* ]]; then
             wget -q "$cdn$module/deploy.tar.gz" && tar -xzvf "deploy.tar.gz"
 #        fi
         mkdir "./config"
         cd "./config"
-        wget -q "$cdn$module/config/config.json"
+        wget -q "$cdnConfig$module/config/config.json"
 #        if [[ $module == *"-manager"* ]]; then
-            wget -q "$cdn$module/config/access.json"
-            wget -q "$cdn$module/config/apps.json"
+            wget -q "$cdnConfig$module/config/access.json"
+            wget -q "$cdnConfig$module/config/apps.json"
 #        fi
         cd "../../"
     done
@@ -36,8 +37,8 @@ case "${BASH_ARGV[1]}" in
     for module in "${ADDR[@]}"; do
         rm -rf "./$module/$module"
         cd "./$module"
-        wget -q "$cdn$module/$module" && chmod +x "$module"
-        wget -q "$cdn$module/deploy.tar.gz" && tar -xzvf "deploy.tar.gz"
+        wget -q "$cdn$module" && chmod +x "$module"
+        wget -q "$cdnConfig$module/deploy.tar.gz" && tar -xzvf "deploy.tar.gz"
         cd "../"
     done
     ;;
