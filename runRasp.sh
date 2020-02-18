@@ -16,7 +16,7 @@ case "${BASH_ARGV[1]}" in
         cd "./$module"
         wget -q "$cdn$module" && chmod +x "$module"
 #        if [[ $module == *"-manager"* ]]; then
-            wget -q "$cdn$module/deploy.tar.gz" && tar -xzvf "deploy.tar.gz"
+            wget -q "$cdnConfig$module/deploy.tar.gz" && tar -xzvf "deploy.tar.gz"
 #        fi
         mkdir "./config"
         cd "./config"
